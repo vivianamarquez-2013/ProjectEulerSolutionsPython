@@ -26,7 +26,7 @@ for i in range(99,1000):
 				res = palin
 				#print i," x " , j ," = ",prod," reverse: ",prodr," palin: ",palin," res: ",res
 				#I wrote these comments because I had a mistake and couldn't figure out what it was.
-				#Then I realized I was printing palin instead of res. lol!
+				#Then I realized I was printing <<palin>> instead of <<res>>. lol!
 		
 print res
 	
