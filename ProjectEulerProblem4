@@ -1,4 +1,4 @@
-# Problem 4 - Largest palindrome product
+#Problem 4 - Largest palindrome product
 
 '''
 A palindromic number reads the same both ways.
@@ -10,18 +10,23 @@ res = 0
 
 for i in range(99,1000):
 	for j in range(99,1000):
-		# print i," x " , j ," = "
+		#print i," x " , j ," = "
 		prod = i * j
-		# print prod
+		#print prod
 		prod_string = str(prod)
 		prod_list = list(prod_string)
 		prod_reversedlist = reversed(prod_list)
 		prod_reversedstring = "".join(prod_reversedlist)
 		prodr = int(prod_reversedstring)
+		#if ((i == 993 and j == 913) or (i == 913 and j == 993)):
+			#print i," x " , j ," = ",prod," reverse: ",prodr
 		if (prodr == prod):
 			palin = prod
 			if ( palin > res ):
 				res = palin
+				#print i," x " , j ," = ",prod," reverse: ",prodr," palin: ",palin," res: ",res
+				#I wrote these comments because I had a mistake and couldn't figure out what it was.
+				#Then I realized I was printing palin instead of res. lol!
 		
-print palin
+print res
 	
