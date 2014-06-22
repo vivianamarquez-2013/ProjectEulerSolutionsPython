@@ -19,3 +19,4 @@ while newFib < 4000000 :
 		sum = sum + Fib
 		
 print "Answer: ",sum
+
