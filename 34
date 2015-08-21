@@ -1,0 +1,54 @@
+package javaapplication5;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+import javax.xml.bind.ParseConversionEvent;
+
+public class JavaApplication5 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //System.out.println("Hola mundo");
+        Scanner sc = new Scanner(System.in);
+        //System.out.println("Ingrese un número: ");
+        //int num = sc.nextInt();
+
+        int ans = 0;
+        for (int i = 10; i <= 1854721; i++) {
+
+            if (i == sumd(i)) {
+                //System.out.println("The sum of the factorial of their digits: "+sumd(i));
+                ans = ans + sumd(i);
+            }
+        }
+        
+        System.out.println(ans);
+
+    }
+
+    public static int fact(int n) {
+        int ans = 1;
+        for (int i = 1; i <= n; i++) {
+            ans = ans * i;
+        }
+        return ans;
+    }
+
+    public static int sumd(int n) {
+        String b = "" + n;
+
+        int mega = 0;
+
+        for (int i = 0; i < b.length(); i++) {
+            mega = mega + fact(Integer.parseInt("" + b.charAt(i)));
+
+        }
+
+        return mega;
+
+    }
+
+}
