@@ -101,3 +101,91 @@ print (t)
 
 ***** Problema # 4
 
+import numpy as np;
+from time import time;
+start = time()
+
+res = 0
+
+for i in range(99,1000):
+	for j in range(99,1000):
+		prod = i * j
+		prod_string = str(prod)
+		prod_list = list(prod_string)
+		prod_reversedlist = reversed(prod_list)
+		prod_reversedstring = "".join(prod_reversedlist)
+		prodr = int(prod_reversedstring)
+		if (prodr == prod):
+			palin = prod
+			if ( palin > res ):
+				res = palin
+
+end = time()
+t = end-start
+
+print (res)
+print (t)
+
+906609
+2.5181219577789307
+
+
+
+***** Problema 5
+
+import numpy as np;
+from time import time;
+start = time()
+
+x = 2520
+res = 0
+
+while True:
+	x = x+2520
+	if (x%11 == 0 and x%12 == 0 and x%13 == 0 and x%14 == 0 and x%15 == 0 and x%16 == 0 and x%17 == 0 and x%18 == 0 and x%19 == 0 and x%20 == 0):
+		res = x
+		break
+
+end = time()
+t = end-start
+
+print (res)
+print (t)
+
+232792560
+0.026194095611572266
+
+
+
+***** Problema 6
+
+import numpy as np;
+from time import time;
+start = time()
+
+sumsqr = 0
+sum = 0
+
+for i in range(0,101):
+	num = i*i
+	sum = sum + i
+	sumsqr = sumsqr + num
+
+sum = sum*sum
+
+res = sum - sumsqr
+
+
+end = time()
+t = end-start
+
+print (res)
+print (t)
+
+25164150
+5.888938903808594e-05
+
+
+
+***** Problema 7
+
