@@ -1,0 +1,103 @@
+***** Problema # 1
+
+from time import time;
+start = time()
+
+res = 0
+for i in range(1,1000):
+	if i%3 == 0 or i%5 == 0:
+		res = res + i 
+
+end = time()
+t = end-start
+
+print (res)
+print (t)
+
+233168
+0.0004019737243652344
+
+
+
+***** Problema # 2
+
+import numpy;
+from time import time;
+start = time()
+
+oldFib = 1
+Fib = 2
+newFib = 0
+sum = 2
+
+while newFib < 4000000 :
+	newFib = oldFib + Fib
+	oldFib = Fib
+	Fib = newFib
+	if Fib%2 == 0:
+		sum = sum + Fib
+
+end = time()
+t = end-start
+
+print (sum)
+print (t)
+
+%%%
+import numpy;
+from time import time;
+start = time()
+
+oldFib = 1
+Fib = 2
+newFib = 0
+sum = 4
+
+while newFib < 34 :
+	newFib = oldFib + Fib
+	oldFib = Fib
+	Fib = newFib
+	sum = sum + Fib
+	print (sum)
+    
+end = time()
+t = end-start
+
+print (sum/2)
+print (t)
+%%%
+
+4613732
+2.002716064453125e-05
+
+
+
+***** Problema # 3
+
+import numpy as np;
+from time import time;
+start = time()
+
+k = 2
+num = 600851475143
+#num=88
+
+while num > 1 :
+	if num % k == 0 :
+		num = num / k
+	else :
+		k = k + 1
+
+end = time()
+t = end-start
+
+print (k)
+print (t)
+
+6857
+0.003123044967651367
+
+
+
+***** Problema # 4
+
