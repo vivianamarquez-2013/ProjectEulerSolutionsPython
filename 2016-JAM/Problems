@@ -187,5 +187,43 @@ print (t)
 
 
 
-***** Problema 7
+***** Problema 14
+
+import numpy as np;
+from time import time;
+
+start = time()
+
+def chain(n):
+	cont = 1
+	while n>1:
+		if n%2==0:
+			n=n/2
+		else:
+			n=3*n+1
+		cont = cont+1
+	return cont
+	
+y = 1
+meme = 0
+fuf = 0
+
+while y<1000000:
+	g = chain(y)
+	if g>meme:
+		meme=g
+		fuf = y
+	y=y+1
+
+end = time()
+t = end-start
+print (t)
+print (meme)
+print (fuf)
+
+54.88534092903137
+525
+837799
+
+
 
